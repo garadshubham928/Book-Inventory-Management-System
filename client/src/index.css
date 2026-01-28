@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #1e3a8a;
+  /* Deep Navy Blue */
+  --secondary-color: #3b82f6;
+  /* Bright Blue */
+  --accent-color: #f59e0b;
+  /* Amber/Orange for highlights */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+
+  --bg-body: #f1f5f9;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] {
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --bg-body: #0f172a;
+  --bg-card: #1e293b;
+  --border-color: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar specific */
+.custom-navbar {
+  background-color: #1e3a8a !important;
+  /* Always navy in light mode */
+  color: white;
+}
+
+[data-bs-theme="dark"] .custom-navbar {
+  background-color: #0f172a !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.custom-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.custom-navbar .nav-link.active,
+.custom-navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Cards */
+.custom-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+}
+
+.stat-card {
+  border-left: 4px solid var(--secondary-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1507842217121-9d590861206b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  padding: 3rem;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
